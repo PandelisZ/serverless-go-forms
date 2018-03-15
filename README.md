@@ -25,7 +25,7 @@ This project can be deployed with the [serverless framework](https://github.com/
 
 To build binaries for deployment run `make` before deploying.
 
-It also utilises [go dep](https://github.com/golang/dep) to manage dependencies. Everything is already included in the vendor folder however.
+You willl also need [go dep](https://github.com/golang/dep) to install the vendor dependencies.
 
 ```
 npm install -g serverless
