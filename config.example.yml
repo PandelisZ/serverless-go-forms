@@ -1,0 +1,6 @@
+MG_API_KEY: "KEY"
+MG_DOMAIN: "DOMAIN"
+MG_SENDER: "Name <email>"
+MG_RECIPIENT: "email"
+MG_PUBLIC_API_KEY: "KEY"
+MG_URL: "https://api.mailgun.net/v3"

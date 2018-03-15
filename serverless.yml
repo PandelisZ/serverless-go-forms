@@ -1,0 +1,21 @@
+service: serverless-go-forms
+
+provider:
+  name: aws
+  profile: default
+  runtime: go1.x
+  environment: ${file(./config.${self:provider.stage}.yml)}
+
+package:
+ exclude:
+   - ./**
+ include:
+   - ./bin/**
+
+functions:
+  submit-json:
+    handler: bin/json
+    events:
+      - http:
+          path: json
+          method: post
