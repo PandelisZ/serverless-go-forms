@@ -23,6 +23,12 @@ func (b *Forwarder) Send(payload types.ContactBasic) error {
 			arrErrors = append(arrErrors, err.Error())
 		}
 	}
+	if b.Slack {
+		err := providers.Slack.Send(payload)
+		if err != nil {
+			arrErrors = append(arrErrors, err.Error())
+		}
+	}
 
 	if len(arrErrors) > 0 {
 		return fmt.Errorf(strings.Join(arrErrors, ";"))

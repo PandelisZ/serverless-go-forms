@@ -23,6 +23,7 @@ func Handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 
 	forwarder := helpers.Forwarder{
 		Mailgun: true,
+		Slack:   true,
 	}
 
 	if err := forwarder.Send(payload); err != nil {
