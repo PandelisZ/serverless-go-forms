@@ -9,3 +9,11 @@
 [[constraint]]
   name = "github.com/nlopes/slack"
   version = "0.2.0"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/dyninc/qstring"
+
+[[constraint]]
+  name = "github.com/gorilla/schema"
+  version = "1.0.1"

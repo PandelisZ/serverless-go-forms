@@ -9,6 +9,12 @@ The endpoint currently supports POSTS with JSON payloads in the following format
 }
 ```
 
+Or application/x-www-form-urlencoded content in the format 
+
+```
+from=sender@example.com&message=Hello%20there
+```
+
 If you need to change this format for your needs you can edit [lib/types/types.go](lib/types/types.go)
 
 ## Configuration
@@ -18,6 +24,9 @@ go-forms currently supports mailgun with plans to support slack and regular smtp
 You can configure your mailgun keys by renaming `config.example.yml` -> `config.dev.yml` and entering your details.
 
 If you want to create a production config use `config.prod.yml`
+
+### CORS
+If you want to lock down the requests to just your dowmain use the cors.origin setting in [serverless.yml](serverless.yml)
 
 ## Building and Deploying
 
