@@ -1,7 +1,6 @@
 build:
 	dep ensure
-	env GOOS=linux go build -ldflags="-s -w" -o bin/json functions/json.go
-	env GOOS=linux go build -ldflags="-s -w" -o bin/urlencoded functions/urlencoded.go
+	env GOOS=linux go build -ldflags="-s -w" -o bin/function function.go
 deploy:
 	make build
 	serverless deploy

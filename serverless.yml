@@ -14,30 +14,14 @@ package:
 
 functions:
   submit-json:
-    handler: bin/json
+    handler: bin/function
     events:
       - http:
-          path: json
+          path: /post
           method: post
           cors:
             origin: '*' # <-- Specify allowed origin
             headers:
-              - Content-Type
-              - X-Amz-Date
-              - Authorization
-              - X-Api-Key
-              - X-Amz-Security-Token
-              - X-Amz-User-Agent
-            allowCredentials: false
-  submit-urlencoded:
-    handler: bin/urlencoded
-    events:
-      - http:
-          path: urlencoded
-          method: post
-          cors:
-            origin: '*' # <-- Specify allowed origin
-            headers: 
               - Content-Type
               - X-Amz-Date
               - Authorization
